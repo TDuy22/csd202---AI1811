@@ -24,8 +24,11 @@ def binary_search_unrecusion(data, target, low, high):
         else:
             low = mid +1
 
-        if low == mid or mid == high or low == high:
-            return False
+        if low == mid or mid == high:
+            if low == target or mid == target or high == target:
+                return True
+            else:
+                return False
         
 def normal_search(data, target):
     for i in data:
