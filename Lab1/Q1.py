@@ -18,12 +18,13 @@ class singlyLinkedList:
 
     def addToTail(self, x):
         newNode = Node(x)
+        if self.head is None:
+            self.head = newNode
+            return
 
         currentNode = self.head
         while currentNode.next:
             currentNode = currentNode.next
         currentNode.next = newNode
 
-if Node(None):
-    print("oke")
-
+    def
