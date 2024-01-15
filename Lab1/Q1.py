@@ -27,4 +27,8 @@ class singlyLinkedList:
             currentNode = currentNode.next
         currentNode.next = newNode
 
-    def
+    def addAfter(self, p, x):
+        currentNode = self.head
+        position = 0
+        if position == p:
+            
