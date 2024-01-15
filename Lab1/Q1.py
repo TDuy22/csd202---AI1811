@@ -28,7 +28,26 @@ class singlyLinkedList:
         currentNode.next = newNode
 
     def addAfter(self, p, x):
+        newNode = Node(x)
         currentNode = self.head
         position = 0
-        if position == p:
-            
+        if p == 0:
+            self.addToHead(x)
+        else:
+            while currentNode != None and position != p -1:
+                position += 1
+                currentNode = currentNode.next
+
+            if currentNode != None:
+                newNode.next = currentNode.next
+                currentNode.next = newNode
+            else:
+                print("Index not present")
+
+    def traverse(self):
+        currentNode = self.head
+        while currentNode != None:
+            print(currentNode.data)
+            currentNode = currentNode.next
+    
+    def deleteFromHead
