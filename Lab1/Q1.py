@@ -34,7 +34,7 @@ class singlyLinkedList:
         if p == 0:
             self.addToHead(x)
         else:
-            while currentNode != None and position != p -1:
+            while currentNode != None and position != p:
                 position += 1
                 currentNode = currentNode.next
 
@@ -59,7 +59,25 @@ class singlyLinkedList:
             beforeNode = currentNode
             currentNode = currentNode.next
 
-currentNode = Node(5)
-beforeNode = currentNode
-beforeNode.data = 9
-print(currentNode.data)
+        beforeNode.next = None
+
+    def deleteAfter(self, p):
+        currentNode = self.head
+        position = 0
+
+        while position != p -1 and currentNode.next != None:
+            position += 1
+            currentNode = currentNode.next
+        
+        if currentNode.next != None:
+            currentNode.next = currentNode.next.next
+        else:
+            print("This position doesn't exist")
+
+    #del is key word show can decleration function name del change delete
+    def delete(self, x):
+        currentNode = self.head
+        while currentNode != None:
+            if currentNode.data == x:
+
+    
