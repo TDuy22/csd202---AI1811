@@ -51,9 +51,17 @@ class singlyLinkedList:
             currentNode = currentNode.next
     
     def deleteFromHead(self):
+        if self.head == None:
+            print("Link list no data")
+            return
+
         self.head = self.head.next
 
     def deleteFromTail(self):
+        if self.head == None:
+            print("Link list no data")
+            return
+
         currentNode = self.head
         while currentNode != None:
             beforeNode = currentNode
@@ -62,6 +70,10 @@ class singlyLinkedList:
         beforeNode.next = None
 
     def deleteAfter(self, p):
+        if self.head == None:
+            print("Link list no data")
+            return
+
         currentNode = self.head
         position = 0
 
@@ -77,6 +89,10 @@ class singlyLinkedList:
     #del is key word show can decleration function name del change delete
     def delete(self, x):
         currentNode = self.head
+        if currentNode == None:
+            print("Link list no data")
+            return
+
         while currentNode.next != None:
             if currentNode.next.data == x:
                 currentNode.next = currentNode.next.next
@@ -90,6 +106,25 @@ class singlyLinkedList:
                 return currentNode
             else:
                 return "Can't founded data"
+            
+    def count(self, x):
+        currentNode = self.head
+        count = 0
+        while currentNode != None:
+            count += 1
+            currentNode = currentNode.next
+
+        return count
+    
+    def delNodeith(self, i):
+        currentNode = self.head
+        position = 0
+        if self.head == None:
+            print("Link list no data")
+            return
+
+        while currentNode != None and position != i:
+            currentNode
                 
 
 
