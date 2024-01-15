@@ -77,7 +77,9 @@ class singlyLinkedList:
     #del is key word show can decleration function name del change delete
     def delete(self, x):
         currentNode = self.head
-        while currentNode != None:
-            if currentNode.data == x:
-
+        while currentNode.next != None:
+            if currentNode.next.data == x:
+                currentNode.next = currentNode.next.next
+    
+    
     
