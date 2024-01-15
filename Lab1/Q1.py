@@ -123,8 +123,17 @@ class singlyLinkedList:
             print("Link list no data")
             return
 
-        while currentNode != None and position != i:
-            currentNode
+        while currentNode.next != None and position != i -1:
+            position += 1
+            currentNode = currentNode.next
+
+        if currentNode.next != None:
+            currentNode.next = currentNode.next.next
+        else:
+            print("Can't founded data")
+
+    def sort():
+        
                 
 
 
