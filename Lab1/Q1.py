@@ -50,4 +50,16 @@ class singlyLinkedList:
             print(currentNode.data)
             currentNode = currentNode.next
     
-    def deleteFromHead
+    def deleteFromHead(self):
+        self.head = self.head.next
+
+    def deleteFromTail(self):
+        currentNode = self.head
+        while currentNode != None:
+            beforeNode = currentNode
+            currentNode = currentNode.next
+
+currentNode = Node(5)
+beforeNode = currentNode
+beforeNode.data = 9
+print(currentNode.data)
