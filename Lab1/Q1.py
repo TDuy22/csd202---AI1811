@@ -80,6 +80,16 @@ class singlyLinkedList:
         while currentNode.next != None:
             if currentNode.next.data == x:
                 currentNode.next = currentNode.next.next
+                return
+        print("Can't founded data")
+        
+    def search(self, x):
+        currentNode = self.head
+        while 
+
+
+
+        
     
     
     
