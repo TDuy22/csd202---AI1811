@@ -7,6 +7,7 @@ class singlyLinkedList:
     def __init__(self, head = None):
         self.head = head
 
+    #1
     def addToHead(self, x):
         newNode = Node(x)
 
@@ -15,7 +16,7 @@ class singlyLinkedList:
         else:
             newNode.next = self.head
             self.head = newNode.next
-
+    #2
     def addToTail(self, x):
         newNode = Node(x)
         if self.head is None:
@@ -27,6 +28,7 @@ class singlyLinkedList:
             currentNode = currentNode.next
         currentNode.next = newNode
 
+    #3
     def addAfter(self, p, x):
         newNode = Node(x)
         currentNode = self.head
@@ -44,12 +46,14 @@ class singlyLinkedList:
             else:
                 print("Index not present")
 
+    #4
     def traverse(self):
         currentNode = self.head
         while currentNode != None:
             print(currentNode.data)
             currentNode = currentNode.next
     
+    #5
     def deleteFromHead(self):
         if self.head == None:
             print("Link list no data")
@@ -57,6 +61,7 @@ class singlyLinkedList:
 
         self.head = self.head.next
 
+    #6
     def deleteFromTail(self):
         if self.head == None:
             print("Link list no data")
@@ -69,6 +74,7 @@ class singlyLinkedList:
 
         beforeNode.next = None
 
+    #7
     def deleteAfter(self, p):
         if self.head == None:
             print("Link list no data")
@@ -86,7 +92,7 @@ class singlyLinkedList:
         else:
             print("This position doesn't exist")
 
-    #del is key word show can decleration function name del change delete
+    #8 del is key word show can decleration function name del change delete
     def delete(self, x):
         currentNode = self.head
         if currentNode == None:
@@ -98,7 +104,8 @@ class singlyLinkedList:
                 currentNode.next = currentNode.next.next
                 return
         print("Can't founded data")
-        
+
+    #9    
     def search(self, x):
         currentNode = self.head
         while currentNode != None:
@@ -106,7 +113,8 @@ class singlyLinkedList:
                 return currentNode
             else:
                 return "Can't founded data"
-            
+
+    #10        
     def count(self, x):
         currentNode = self.head
         count = 0
@@ -115,48 +123,3 @@ class singlyLinkedList:
             currentNode = currentNode.next
 
         return count
-    
-    def delNodeith(self, i):
-        currentNode = self.head
-        position = 0
-        if self.head == None:
-            print("Link list no data")
-            return
-
-        while currentNode.next != None and position != i -1:
-            position += 1
-            currentNode = currentNode.next
-
-        if currentNode.next != None:
-            currentNode.next = currentNode.next.next
-        else:
-            print("Can't founded data")
-
-    def sort():
-        currentNode = self.head
-        newLinkList = singlyLinkedList(self.head)
-        self = newLinkList
-
-        while currentNode != Node:
-            currentNode = currentNode.next
-
-newLinkList = singlyLinkedList(None)
-newLinkList.sort
-
-
-                
-
-
-
-
-            
-
-
-        
-
-
-
-        
-    
-    
-    
