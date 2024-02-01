@@ -60,27 +60,52 @@ class BSTree:
             father.left = node
     
     #f2
-        def preOrder(self,p):
-            if p==None:
-                return
-            if p.data.rate >= 4 and p.data.rate <= 10:
-                self.visit(p)
-            self.preOrder(p.left)
-            self.preOrder(p.right)
-        def visit(self.p):
-            if p == None:
-                return
-            print(f"{p.data}", end = " ")
-        def f2(self):
-            self.preOrder(self.root)
-            print("")
+    def preOrder(self,p):
+        if p==None:
+            return
+        if p.data.rate >= 4 and p.data.rate <= 10:
+            self.visit(p)
+        self.preOrder(p.left)
+        self.preOrder(p.right)
+    def visit(self,p):
+        if p == None:
+            return
+        print(f"{p.data}", end = " ")
+    def f2(self):
+        self.preOrder(self.root)
+        print("")
 
     #f3 
-    def f3():
-        count = 0
-        
+    def f3(self):
+        if self.isEmpty():
+            return
+        my = MyQueue()
+        my.EnQueue(self.root)
+        count = 1
+        while not my.isEmpty():
+            p = my.DeQueue()
+            if count %2 ==1:
+                self.visit(p)
+            count+= 1
+            if p.left!=None:
+                my.EnQueue(p.left)
+            if p.right!=None:
+                my.EnQueue(p.right)
+        print("") 
 
-        
+    #f4
+    def postOrder(self,p):
+        if p == None:
+            return
+        self.postOrder(p.left)
+        self.postOrder(p.right)
+        if p.data.wing <=4 and p.data.rates > 6:
+            self.visit(p)
+    def f4(self):
+        postOrder(self.root)
+        print("")
+
+
 
     def clear(self):
         self.root = None
