@@ -1,10 +1,9 @@
 from book import *
-from borrowerBook import *
+from borrowerBooks import *
 from linkedList import *
 
-dbBook = linkedList()
+library = linkedList()
 dbBorrowed = linkedList()
-        
 
 # book1 = book("12345","asfsdf", "duy", "online")
 # he = linkedList(book1)
