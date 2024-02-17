@@ -12,7 +12,7 @@ class linkedList:
     
     def addToHead(self, node):
         if self.isEmpty:
-            self.head = data
+            self.head = node
         else:
             node.next = self.head
             self.head = node
