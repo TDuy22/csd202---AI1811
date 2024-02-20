@@ -10,6 +10,7 @@ def deletedbBorrowed(bidDelete, borrowerDelete):
             dbBorrowed.head = dbBorrowed.head.next
             return
         else:
+            currentNode = dbBorrowed.head
             while currentNode.next:
                 if currentNode.next.data.bid == bidDelete and currentNode.next.data.borrower == borrowerDelete:
                     currentNode.next = currentNode.next.next
@@ -31,8 +32,9 @@ def returnBook():
                 if currentNode1.data.bid == bidReturn:
                     currentNode1.data.status = "0"
                     print("Successfully")
-            deletedbBorrowed(bidReturn, returner)
-            return
+                    deletedbBorrowed(bidReturn, returner)
+                    return
+                currentNode1 = currentNode1.next
 
         currentNode = currentNode.next
     print("Can't find data borrow")

@@ -16,6 +16,7 @@ while run:
     print("4. Lend a book from library")
     print("5. Return a book to the library")
     print("6. Exit")
+    print()
     choose = input("Enter a number from 1->6: ")
 
     if choose =="1":
@@ -32,3 +33,4 @@ while run:
         run = False
     else:
         print("Wrong")
+    print()

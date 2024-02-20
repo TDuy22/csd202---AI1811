@@ -14,11 +14,12 @@ def borrowedBook():
         if currentNode.data.bid == bidBorrow:
             runBorrow = True
             break
+        currentNode = currentNode.next
     
     if runBorrow:
         if currentNode.data.status == "0":
             print("users can lend")
-            dbBorrowed.addToHead(borrowerBooks(bidBorrow, borrower))
+            dbBorrowed.addToHead(node(borrowerBooks(bidBorrow, borrower)))
             currentNode.data.status = "1"
         else:
             print("Book isn't available")
