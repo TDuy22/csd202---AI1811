@@ -26,19 +26,17 @@ class Graph:
             u = self.minDistance(dist, sptSet)
             sptSet[u] = True
             for v in range(self.V):
-                if (self.graph[u][v] > 0 and
-                   sptSet[v] == False and
+                if (self.graph[u][v] > 0 and sptSet[v] == False and
                    dist[v] > dist[u] + self.graph[u][v]):
                     dist[v] = dist[u] + self.graph[u][v]
         self.printSolution(dist)
 
 g = Graph(6)
-g.graph = [[0, 1, 0, 2, 0, 0],
-           [1, 0, 5, 2, 0, 0],
-           [0, 5, 0, 1, 2, 1],
-           [2, 2, 1, 0, 3, 0],
-           [0, 0, 2, 3, 0, 10],
-           [0, 0, 1, 0, 10, 0]
+g.graph = [[0, 1, 0, 0, 0, 0],
+           [0, 0, 5, 2, 0, 7],
+           [0, 0, 0, 0, 2, 1],
+           [2, 0, 1, 0, 4, 0],
+           [0, 0, 0, 3, 0, 0],
+           [0, 0, 0, 0, 10, 0]
            ]
 g.dijkstra(0)
-
