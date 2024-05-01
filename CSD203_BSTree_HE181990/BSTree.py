@@ -46,7 +46,7 @@ class BSTree:
         current = self.root
         father = None
         while current:
-            if current.data.rate == rate:
+            if current.data.rate == xRate:
                 return #key data exits
             else:
                 father = current
@@ -102,8 +102,19 @@ class BSTree:
         if p.data.wing <=4 and p.data.rates > 6:
             self.visit(p)
     def f4(self):
-        postOrder(self.root)
+        self.postOrder(self.root)
         print("")
+        
+    #f5
+    def f5(self):
+        self._in_order_filter(self.root)
+
+    def _in_order_filter(self, node):
+        if node:
+            self._in_order_filter(node.left)
+            if node.type[0] == 'A' or node.type[0] == 'C':
+                print(f'({node.type},{node.rate},{node.wing})', end=' ')
+            self._in_order_filter(node.right)
 
 
 
